@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-int extendedEuclidean(int a, int b){
+int inverse(int a, int b){
     int q,r;
     int prev_s = 1, prev_t = 0;
     int cur_s = 0, cur_t = 1;
@@ -34,7 +34,7 @@ int main() {
     }
     for( int i = 0; i<n ; i++){
         M[i]= product_m/m[i];
-        y[i] = extendedEuclidean(M[i],m[i]);
+        y[i] = inverse(M[i],m[i]);
         x+=M[i]*y[i]*a[i];
     }
     x = x % product_m;
